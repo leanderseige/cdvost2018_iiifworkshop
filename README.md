@@ -4,6 +4,8 @@ https://codingdavinci.de/events/ost/
 
 Leander Seige, seige@ub.uni-leipzig.de, CC-BY-SA 2018
 
+![Demo Picture](demo.png)
+
 ## Instructions:
 
 Just run the jupyter notebbok.
