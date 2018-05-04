@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="eurls.js"></script> 
+<script src="nurls.js"></script> 
+<script src="murls.js"></script> 
+<script>
+    
+var uai = new Image;
+var ubi = new Image;
+var uci = new Image;
+
+var uaf = 0;
+var ubf = 0;
+var ucf = 0;
+    
+function drawAvatar(event) {
+  
+    if(event) {
+        var y = event.offsetY;
+        if (y<150) {
+            uaf=1-uaf;
+        } else if (y<210) {
+            ubf=1-ubf;
+        } else {
+            ucf=1-ucf;
+        }
+    }
+
+    var canvas = document.getElementById('canvas');
+    canvas.width = 300;
+    canvas.height = 300;
+
+    var ctx = canvas.getContext('2d');
+    
+    if(uaf) {
+        ctx.save();
+        ctx.scale(-1,1);
+    }
+    ctx.drawImage(uai, -300*uaf, 0, 300, 150);
+    ctx.restore();
+
+    if(ubf) {
+        ctx.save();
+        ctx.scale(-1,1);
+    }
+    ctx.drawImage(ubi, -300*ubf, 150, 300, 60);
+    ctx.restore();
+
+
+    if(ucf) {
+        ctx.save();
+        ctx.scale(-1,1);
+    }
+    ctx.drawImage(uci, -300*ucf, 210, 300, 90);
+    ctx.restore();
+
+}
+    
+function randomImages() {
+
+    uai.onload = function() { drawAvatar(null); }
+    uai.src = eurls[Math.floor(Math.random()*eurls.length)];
+    ubi.onload = function() { drawAvatar(null); }
+    ubi.src = nurls[Math.floor(Math.random()*nurls.length)];
+    uci.onload = function() { drawAvatar(null); }
+    uci.src = murls[Math.floor(Math.random()*murls.length)];
+    
+    drawAvatar(null);
+}
+
+</script>
+</head>
+
+<body onload="randomImages()">
+    
+      <input type="button" value="randomize" onclick="randomImages()" /><br /><br />
+
+    <canvas id="canvas" onclick="drawAvatar(event)" />
+
+</body>
+</html>

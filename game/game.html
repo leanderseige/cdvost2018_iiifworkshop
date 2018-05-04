@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<!--
+
+Code of this Game was derived from https://stackoverflow.com/questions/29329698/html5-memory-game-javascript-function by Cody Taylor 
+
+Adapted for this Demo by Leander Seige
+
+CC-BY-SA
+
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title> Demo </title>
+<script src="urls.js"></script> 
+<script>
+    var countc = 0; 
+    var choicea; 
+    var choiceb;
+
+    var match = 0; 
+    var back = "card.jpg"; 
+
+    var faces = []; 
+
+    faces[0] = faces[15] = urls[0];
+    faces[1] = faces[11] = urls[1];
+    faces[2] = faces[12] = urls[2];
+    faces[3] = faces[9] = urls[3];
+    faces[4] = faces[13] = urls[4];
+    faces[5] = faces[10] = urls[5];
+    faces[6] = faces[14] = urls[6];
+    faces[7] = faces[8] = urls[7];
+
+    function choose(card) {
+            if (countc == 0) {
+                choicea = card;
+                document.images[card].src = faces[card];
+                countc = 1;
+            } else if (countc == 1) {
+                countc = 2;
+                choiceb = card;
+                document.images[card].src = faces[card];
+                timer = setInterval("check()", 1000);
+            }
+        }
+
+    function check() {
+      clearInterval(timer); //stop timer
+      countc = 0;
+      if (faces[choiceb] == faces[choicea]) {
+        match++;
+        document.getElementById("matches").innerHTML = match;
+      } else {
+        document.images[choicea].src = back;
+        document.images[choiceb].src = back;
+        return;
+      }
+}
+</script>
+</head>
+
+<body>
+    <a href="javascript:choose(0)"><img src="card.jpg" width=150px height=150px /></a>
+    <a href="javascript:choose(1)"><img src="card.jpg" width=150px height=150px /></a>
+    <a href="javascript:choose(2)"><img src="card.jpg" width=150px height=150px /></a>
+    <a href="javascript:choose(3)"><img src="card.jpg" width=150px height=150px /></a>
+    <br />
+    <a href="javascript:choose(4)"><img src="card.jpg" width=150px height=150px/></a>
+    <a href="javascript:choose(5)"><img src="card.jpg" width=150px height=150px /></a>
+    <a href="javascript:choose(6)"><img src="card.jpg" width=150px height=150px /></a>
+    <a href="javascript:choose(7)"><img src="card.jpg" width=150px height=150px/></a>
+    <br />
+    <a href="javascript:choose(8)"><img src="card.jpg" width=150px height=150px/></a>
+    <a href="javascript:choose(9)"><img src="card.jpg" width=150px height=150px /></a>
+    <a href="javascript:choose(10)"><img src="card.jpg" width=150px height=150px /></a>
+    <a href="javascript:choose(11)"><img src="card.jpg" width=150px height=150px/></a>
+    <br />
+    <a href="javascript:choose(12)"><img src="card.jpg" width=150px height=150px /></a>
+    <a href="javascript:choose(13)"><img src="card.jpg" width=150px height=150px /></a>
+    <a href="javascript:choose(14)"><img src="card.jpg" width=150px height=150px /></a>
+    <a href="javascript:choose(15)"><img src="card.jpg" width=150px height=150px /></a>
+    <br />
+    <b style="font-size:40px;"> MATCHES :</b>
+    <b style="font-size:60px;" id="matches"> 0 </b>
+</body>
+
+</html>
