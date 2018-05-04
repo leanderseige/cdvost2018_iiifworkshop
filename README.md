@@ -4,7 +4,7 @@ https://codingdavinci.de/events/ost/
 
 Leander Seige, seige@ub.uni-leipzig.de, CC-BY-SA 2018
 
-![Demo Picture](demo.png)
+![Demo Picture](demo1.png) ![Demo Picture](demo2.png) ![Demo Picture](demo3.png) ![Demo Picture](demo4.png)
 
 ## Instructions:
 
