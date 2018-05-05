@@ -2,7 +2,7 @@
 
 https://codingdavinci.de/events/ost/
 
-This notebook collects IIIF Image API resources from the National Gallery of Arts and builts two simple yet funny demo applications using IIIF resources on the fly. Beware! This project does not intend to show beautiful code. It contains some quick and dirty hacks to demonstrate IIIF features in a non-scientific way. The python code in the jupyter notebook recognizes and collects faces in the images of the National Gallery of Arts highlights collection and prepares the direct IIIF-URLs for the appropriate image regions for two sample applications:
+This notebook collects IIIF Image API resources from the National Gallery of Arts and builts two simple yet funny demo applications using IIIF resources on the fly. Beware! This project does not intend to show beautiful code. It contains some quick and dirty hacks to demonstrate IIIF features in a non-scientific way. The python code in the jupyter notebook recognizes and collects faces in the images of the National Gallery of Arts highlights collection and prepares the direct IIIF-URLs of the appropriate image regions for two sample applications:
 
 ## Use Case 1: Generate Patchwork Avatars 
 
