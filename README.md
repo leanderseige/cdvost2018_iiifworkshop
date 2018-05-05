@@ -6,13 +6,13 @@ This notebook collects IIIF Image API resources from the National Gallery of Art
 
 ## Use Case 1: Generate Patchwork Avatars 
 
-<a href="http://htmlpreview.github.io/?https://github.com/leanderseige/cdvost2018_iiifworkshop/blob/master/generator/index.html" target="_blank">Live Demo</a>
+[Live Demo](http://htmlpreview.github.io/?https://github.com/leanderseige/cdvost2018_iiifworkshop/blob/master/generator/index.html)
 
 ![Demo Picture](images/demo1.png) ![Demo Picture](images/demo2.png) ![Demo Picture](images/demo3.png) ![Demo Picture](images/demo4.png)
 
 ## Use Case 2: Memory Game
 
-<a href="http://htmlpreview.github.io/?https://github.com/leanderseige/cdvost2018_iiifworkshop/blob/master/game/game.html" target="_blank">Live Demo</a>
+[Live Demo](http://htmlpreview.github.io/?https://github.com/leanderseige/cdvost2018_iiifworkshop/blob/master/game/game.html)
 
 ![Demo Picture](images/demo5.png)
 
