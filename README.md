@@ -1,4 +1,4 @@
-# Files for the IIIF Workshop at Coding da Vinci Ost 2018 in Leipzig, Germany
+# Files for the IIIF Workshop at Coding da Vinci Ost 2018 Hackathon in Leipzig, Germany
 
 https://codingdavinci.de/events/ost/
 
